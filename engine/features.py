@@ -4,7 +4,6 @@ from shlex import quote
 import sqlite3
 import struct
 import subprocess
-import time
 import webbrowser
 from hugchat import hugchat
 from playsound import playsound

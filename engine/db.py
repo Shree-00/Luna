@@ -5,22 +5,22 @@ conn = sqlite3.connect("Luna.db")
 cursor = conn.cursor()
 
 #create a table sys_commands
-query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary key, name VARCHAR(100), path VARCHAR(1000))"
-cursor.execute(query)
+# query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary key, name VARCHAR(100), path VARCHAR(1000))"
+# cursor.execute(query)
 
-#query = "INSERT INTO sys_command VALUES(null,'Command Prompt', 'C:\\WINDOWS\\system32\\cmd.exe')"
-#cursor.execute(query)
-#conn.commit()
+# query = "INSERT INTO sys_command VALUES(null,'Instagram', 'C:\\Users\\Shreeya\\OneDrive\\Desktop\\Instagram.lnk')"
+# cursor.execute(query)
+# conn.commit()
 
 #create table command
-query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), path VARCHAR(1000))"
-cursor.execute(query)
+# query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), path VARCHAR(1000))"
+# cursor.execute(query)
 
-#query = "INSERT INTO web_command VALUES (null,'classroom', 'https://classroom.google.com/')"
-#cursor.execute(query)
-#conn.commit()
+# query = "INSERT INTO web_command VALUES (null,'GitHub', 'https://github.com/')"
+# cursor.execute(query)
+# conn.commit()
 
-# cursor.execute("DELETE FROM contacts WHERE id IN (19)")
+# cursor.execute("DELETE FROM sys_command WHERE id IN (4)")
 # conn.commit()
 
 #  Verify deletion
@@ -36,7 +36,7 @@ cursor.execute(query)
 # print(results[0][0])
 
 # Create a table with the desired columns
-cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, name VARCHAR(200), mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
+# cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, name VARCHAR(200), mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
 
 # Specify the column indices you want to import (0-based index)
 # Example: Importing the 1st and 3rd columns

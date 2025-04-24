@@ -1,5 +1,10 @@
 /envluna
 contacts.csv
 luna.db
-/engine/_pycache_
+/engine/_pycache_/
 /engine/cookies.json
+/engine/auth/samples
+/engine/model/yolo3.cfg
+/engine/model/yolo3.weights
+!engine/model/blip
+!engine/model/yolo

@@ -1,15 +1,19 @@
-# we habe done multiThreading here
+# # we habe done multiThreading here
+
+# import multiprocessing
+# import subprocess           
 
 import multiprocessing
+import time
 import subprocess
 
-# To run luna
+# To run luna 
 def startLuna():
     print("starting Luna")
     from main import start
     start()
 
-# To run hotward detection
+ # To run hotward detection
 def listenHotword():
     print("running hotword detection")
     from engine.features import hotword
@@ -17,15 +21,16 @@ def listenHotword():
 
 #start both process
 if __name__ == '__main__':
-        p1 = multiprocessing.Process(target=startLuna)
-        p2 = multiprocessing.Process(target=listenHotword)
-        p1.start()
-        p2.start()
-        p1.join()
+    p1 = multiprocessing.Process(target=startLuna)
+    p2 = multiprocessing.Process(target=listenHotword)
 
-        if p2.is_alive(): 
-            p2.terminate()
-            p2.join()
+    p1.start()
+    #time.sleep(1)  # <-- ensure Luna starts first
+    p2.start()
 
-        print("system stop")            
-        
+    p1.join()
+    if p2.is_alive(): 
+        p2.terminate()
+        p2.join()
+
+    print("system stop")

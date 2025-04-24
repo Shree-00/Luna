@@ -211,7 +211,7 @@ body {
 
 /* chat bxc end*/
 
-.svg-frame {
+/* .svg-frame {
   position: relative;
   width: 455px;
   height: 455px;
@@ -286,5 +286,5 @@ svg {
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
